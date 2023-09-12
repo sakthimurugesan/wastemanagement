@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+  
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #222;
+      }
+  
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-left: 450px;
+      }
+  
+      .form-container {
+        width: 600px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+  
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 36px;
+        color: #b38bff;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      label {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+  
+      input {
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #555;
+      }
+  
+      button {
+        padding: 10px;
+        background-color: #b38bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.2s ease-in-out;
+      }
+  
+      button:hover {
+        background-color: #8c5fb2;
+      }
+  
+      a {
+        text-decoration: none;
+        color: #b38bff;
+        font-size: 18px;
+        transition: color 0.2s ease-in-out;
+      }
+  
+      a:hover {
+        color: #8c5fb2;
+      }
+  
+      p {
+        text-align: center;
+        margin: 8px;
+      }
+      .nav {
+        height: 50px;
+        width: 100%;
+        background-color: #4d4d4d;
+        position: relative;
+      }
+      
+      .nav > .nav-header {
+        display: inline;
+      }
+      
+      .nav > .nav-header > .nav-title {
+        display: inline-block;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 10px 10px 10px;
+      }
+      
+      .nav > .nav-btn {
+        display: none;
+      }
+      
+      .nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+      }
+      
+      .nav > .nav-links > a {
+        display: inline-block;
+        padding: 13px 10px 13px 10px;
+        text-decoration: none;
+        color: #efefef;
+      }
+      
+      .nav > .nav-links > a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      
+      .nav > #nav-check {
+        display: none;
+      }
+      
+      @media (max-width:600px) {
+        .nav > .nav-btn {
+          display: inline-block;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
+        .nav > .nav-btn > label {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 13px;
+        }
+        .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .nav > .nav-btn > label > span {
+          display: block;
+          width: 25px;
+          height: 10px;
+          border-top: 2px solid #eee;
+        }
+        .nav > .nav-links {
+          position: absolute;
+          display: block;
+          width: 100%;
+          background-color: #333;
+          height: 0px;
+          transition: all 0.3s ease-in;
+          overflow-y: hidden;
+          top: 50px;
+          left: 0px;
+        }
+        .nav > .nav-links > a {
+          display: block;
+          width: 100%;
+        }
+        .nav > #nav-check:not(:checked) ~ .nav-links {
+          height: 0px;
+        }
+        .nav > #nav-check:checked ~ .nav-links {
+          height: calc(100vh - 50px);
+          overflow-y: auto;
+        }
+      }
+</style>
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        JoGeek
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="">Classify Waste</a>
+      <a href="">Bin Map</a>
+      <a href="">Services</a>
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+    <div class="container">
+        <div class="form-container" id="login-form">
+          <h1>Login</h1>
+          <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+          </form>
+          <p>Don't have an account? <a href="signup.html" id="signup-link">Sign up</a></p>
+        </div>
+    
+       
+</body>
+<script>
+    
+</script>
+</html>
